@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #3f8efc;
+  --secondary-color: #000;
+  --text-color: #555;
+  --bg-color: #f9f9f9;
+  --transition-time: 0.5s ease;
+}
+
+.workContainer {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+}
+
+
+.workContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2) 0%, rgba(0, 123, 255, 0) 100%);
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.workContainer h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.workContainer p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.roleList {
+  display: flex;
+  transition: transform var(--transition-time);
+  justify-content: center;
+  width: 100%;
+}
+
+.roleCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 0 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roleCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.roleImage {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.prevButton, .nextButton {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .roleCard {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .roleCard {
+    width: 120px;
+  }
+
+  .prevButton, .nextButton {
+    font-size: 1rem;
+  }
+}

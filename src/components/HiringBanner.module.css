@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #3f8efc;
+  --secondary-color: #000;
+  --text-color: #555;
+  --bg-color: #f9f9f9;
+}
+
+.bannerContainer {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.svgIcon {
+  width: 60px;
+  height: 60px;
+  stroke: var(--primary-color);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.bannerText h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.hiring {
+  color: var(--primary-color);
+  animation: colorChange 3s infinite;
+}
+
+.bannerText p {
+  color: var(--text-color);
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: var(--primary-color);
+  }
+  50% {
+    color: var(--secondary-color);
+  }
+}
+
+.applyButton {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.applyButton:hover {
+  background-color: #3a7de0;
+}
+
+.bannerRight {
+  display: flex;
+  align-items: center;
+}
+
+.interviewIcon .svgIcon {
+  width: 80px;
+  height: 80px;
+  stroke: var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.interviewIcon:hover .svgIcon {
+  transform: scale(1.1);
+}

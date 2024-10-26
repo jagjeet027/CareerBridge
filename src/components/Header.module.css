@@ -1,0 +1,94 @@
+/* Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Reduced padding to make the header smaller */
+  background-color: #1a1a2e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logoLink {
+  color: white;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 5px 0;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #f0a500;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.registerBtn, .signInBtn {
+  padding: 6px 14px;
+  background-color: transparent;
+  border: 1px solid #f0a500;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.registerBtn:hover, .signInBtn:hover {
+  background-color: #f0a500;
+  color: black;
+}
+
+.signOutBtn {
+  padding: 6px 14px;
+  background-color: transparent;
+  border: 1px solid #e94560;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signOutBtn:hover {
+  background-color: #e94560;
+  color: black;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Hide navigation on small screens */
+  }
+
+  .authButtons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px;
+  }
+}

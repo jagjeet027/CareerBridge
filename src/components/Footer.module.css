@@ -1,0 +1,95 @@
+.footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerSection {
+  flex: 1;
+  margin: 10px;
+}
+
+.footerSection h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footerSection ul li:hover {
+  text-decoration: underline;
+}
+
+.footerSection h2 {
+  font-size: 24px;
+  color: #52a1f2;
+}
+
+.footerSection p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.getStartedBtn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.getStartedBtn:hover {
+  background-color: #ccc;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+}
+
+.legalLinks {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.legalLinks li {
+  cursor: pointer;
+}
+
+.legalLinks li:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,130 @@
+/* Register.module.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.leftContainer {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}.iconContainer {
+  position: relative;
+  width: 120px; /* Define width of the profile picture container */
+  height: 120px; /* Define height of the profile picture container */
+  margin: 0 auto; /* Center the container horizontally */
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Ensure the image stays within the circle */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for smooth animation */
+  cursor: pointer; /* Show pointer when hovered */
+}
+
+.iconContainer:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.profilePreview {
+  width: 100%; /* Take full width of the container */
+  height: 100%; /* Take full height of the container */
+  object-fit: cover; /* Ensure the image covers the circle properly */
+  border-radius: 50%; /* Keep the image circular */
+  transition: opacity 0.3s ease; /* Smooth transition when image changes */
+}
+
+.iconContainer:hover .profilePreview {
+  opacity: 0.9; /* Slight fade effect on hover */
+}
+
+/* Add styles for when no image is present (fallback icon) */
+.adminIcon {
+  font-size: 60px; /* Define size of the icon */
+  color: #555; /* Fallback icon color */
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.iconContainer:hover .adminIcon {
+  color: #333; /* Darken the icon on hover */
+}
+
+
+.adminIcon {
+  font-size: 6rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.rightContainer {
+  height: 550px;
+  flex: 1;
+  padding: 40px;
+  background-color: #6106c9d9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.backgroundImage {
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 40px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #f0a500;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.inputIcon {
+  position: absolute;
+  left: 15px;
+  color: #f0a500;
+  font-size: 18px;
+}
+.welcomeMessage {
+  text-align: center;
+  font-size: 1.2em;
+  color: #fbff00;
+  margin: 10px 0;
+}
+.submitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #f0a500;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #fcbd03;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}

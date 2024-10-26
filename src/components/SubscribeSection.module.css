@@ -1,0 +1,58 @@
+/* :root {
+  --primary-color: #ffffff;
+  --secondary-color: #3b82f6;
+  --form-bg: #ffffff;
+  --form-shadow: rgba(0, 0, 0, 0.1);
+  --text-color: #ffffff;
+  --font-size-large: 2.5rem;
+  --font-size-small: 1rem;
+} */
+
+.subscribeSection {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.subscribeSection > h2 {
+  font-size: 3.5rem;
+  color: orange;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.emailInput {
+  padding: 15px;
+  font-size: var(--font-size-small);
+  border-radius: 30px 0 0 30px;
+  border: none;
+  outline: none;
+  width: 300px;
+  box-shadow: 0 4px 8px var(--form-shadow);
+}
+
+.subscribeButton {
+  padding: 15px 30px;
+  font-size: var(--font-size-small);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 0 30px 30px 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribeButton:hover {
+  background-color: #2563eb;
+}
